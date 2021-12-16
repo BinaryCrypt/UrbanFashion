@@ -1,3 +1,13 @@
+:root {
+    --white:#ffffff;
+    --gradient1:linear-gradient(45deg, #87adfe, #ff77cd);
+    --shadoow1:rgba(92, 28, 68, 0.15);
+    --darkblue:#232d60;
+    --darkgreyblue:#6a7199;
+    --greyblack:#333;
+    --blacl:black;
+}
+
 .container {
     height: 100vh;
     width: 100%;
@@ -11,10 +21,12 @@
 }
 
 .navbar{
-    width: 100%;
-    height: 15vh;
+    height: 70px;
     display: flex;
     align-items: center;
+    background-image:var(--gradient1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .logo {
@@ -22,26 +34,27 @@
     cursor: pointer;
 }
 
-.cart {
-    width: 40px;
-    cursor: pointer;
-    margin-left: 700px;
-}
-
-.nav{
-    flex: 1;
-    padding-left: 60%;
-}
-
-nav ul li {
+.navbar ul li {
     display: inline-block;
-    list-style:none;
-    margin: 0px 20px;
 }
 
-nav ul li a {
+.navbar a {
     text-decoration: none;
-    color:#333;
+    color: var(--greyblack);
+    display: inline-block;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart {
+    width: 55px;
+    cursor: pointer;
+    margin-left: 570px;
+}
+
+.navbar a:hover {
+    background-color: var(--white);
+    border-radius: 10px;
 }
 
 .content h1 {
@@ -49,28 +62,33 @@ nav ul li a {
     font-weight: 100;
     margin-top: 24px;
     margin-bottom: 15px;
-    color: #232d60;
+    color:var(--darkblue);
 }
 
 .content p {
     font-size: 20px;
-    color: #6a7199;
+    color:var(--darkgreyblue);
 }
+
 
 .content {
     margin-left: 10%;
     margin-top: 10%;
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--white);
 }
 
-.content .btn {
+.btn {
     display: inline-block;
-    background:linear-gradient(45deg, #87adfe, #ff77cd);
-    border-radius: 6px;
+    background:var(--gradient1);
+    border-radius: 6px solid var(--gradient1);
+    border-radius: 10px;
     padding: 10px 20px;
     box-sizing: border-box;
     text-decoration: none;
-    color: #fff;
-    box-shadow: 3px 8px 22px rgba(92, 28, 68, 0.15);
+    color: var(--white);
 }
 
 .arrow-icons {
@@ -99,7 +117,7 @@ nav ul li a {
 
 .social-links a {
     text-decoration: none;
-    color:#6a7199;
+    color:var(--darkgreyblue);
     padding-right: 20px;
     font-size: 14px;
 }
